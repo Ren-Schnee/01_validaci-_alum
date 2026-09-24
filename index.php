@@ -1,4 +1,4 @@
 <?php
-//L'index ha de carregar el model i redirigir al home
-
+header('Location: ../views/home.php');
+exit;
 ?>
