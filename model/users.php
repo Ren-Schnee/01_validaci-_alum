@@ -2,7 +2,7 @@
 $users = [
     [
         "id" => 0,
-        "name" => "Toni Fernandez",
+        "name" => "Daniel Espinosa",
         "username" => "admin",
         "password" => password_hash('123', PASSWORD_DEFAULT),
         "mail" => "toni.fernandez@cirvianum.cat",
@@ -11,8 +11,8 @@ $users = [
     ],
     [
         "id" => 1,
-        "name" => "Raquel Boronat",
-        "username" => "raquel",
+        "name" => "Ren Schnee",
+        "username" => "ren",
         "password" => password_hash('123', PASSWORD_DEFAULT),
         "mail" => "raquel.boronat@cirvianum.cat",
         "rol" => "user",
