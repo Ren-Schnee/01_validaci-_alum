@@ -19,7 +19,7 @@
          Idioma
         </a>
         <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Catalaà</a></li>
+          <li><a class="dropdown-item" href="#">Català</a></li>
           <li><a class="dropdown-item" href="#">Anglès </a></li>
         </ul>
       </li>
