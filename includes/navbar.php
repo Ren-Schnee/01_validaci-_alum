@@ -1,3 +1,8 @@
+<?php
+  $currentPage = basename($_SERVER['PHP_SELF']);
+  echo $currentPage;
+?>
+
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="../views/home.php">
@@ -9,7 +14,7 @@
     </a>
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Login</a>
+        <a class="nav-link active" href="../views/login.php">Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Crea un compte</a>
@@ -19,8 +24,8 @@
          Idioma
         </a>
         <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Català</a></li>
-          <li><a class="dropdown-item" href="#">Anglès </a></li>
+          <li><a class="dropdown-item" href="../controllers/language_controller.php?lang=ca&redirect=<?=$currentPage?>">Catala</a></li>
+          <li><a class="dropdown-item" href="../controllers/language_controller.php?lang=an&redirect=<?=$currentPage?>">Anglés</a></li>
         </ul>
       </li>
 

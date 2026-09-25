@@ -7,6 +7,10 @@
     if (isset($_SESSION['LANG_APP']) && $_SESSION['LANG_APP'] == 'an') {
         include('../language/an.php');
     }
+
+  $currentPage = basename($_SERVER['PHP_SELF']);
+  echo $currentPage;
+
 ?>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">

@@ -1,4 +1,7 @@
-
+<?php
+include('../includes/header.php');
+include('../includes/navbar.php');
+?>
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-5"> <!-- Login with colums -->
