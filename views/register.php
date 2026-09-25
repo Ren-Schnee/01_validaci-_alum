@@ -1,3 +1,7 @@
+<?php
+include('../includes/header.php');
+include('../includes/navbar.php');
+?>
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -8,6 +12,7 @@
                 method="POST"
                 class="border p-4 bg-light"
                 enctype="multipart/form-data">
+                <!-- basic per enviar fitxers al servidor -->
 
                 <div class="mb-3">
                     <label for="name" class="form-label">Nom i cognoms</label>
