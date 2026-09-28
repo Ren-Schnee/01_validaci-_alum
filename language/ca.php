@@ -3,7 +3,6 @@
 $text = [
     'title_index' => 'Exemple de Validació dels usuaris',
     'login' => 'Inicia sessió',
-    'logout' => 'Sortir de la sessió',
     'username'=>'Usuari',
     'password' => 'Contrasenya',
     'register' => 'Crea un compte',
@@ -35,11 +34,14 @@ $text = [
     'language'=>'Idioma',
     'register_image'=> 'Imatge de perfil',
     'welcome' => 'Hola ',
-    'profile'=> 'Perfil'
-
-
-
-
-
-
+    'profile'=> 'Perfil',
+    'product_list'=> 'Llista de productes',
+    'product_name' => 'Nom del producte',
+    'category' => 'Categoria',
+    'all_categories' => 'Totes les categories',
+    'maxium_price'=> 'Preu màxim',
+    'price'=> 'Preu',
+    'filter_button' => 'Filtrar',
+    'reset_button'=> 'Netejar filtres',
+    'search_product' => 'Cerca producte'
 ];

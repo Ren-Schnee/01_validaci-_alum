@@ -3,7 +3,6 @@
 $text = [
     'title_index' => 'User Validation Example',
     'login' => 'Log in',
-    'logout' => 'Log out',
     'username' => 'Username',
     'password' => 'Password',
     'register' => 'Create an account',
@@ -34,5 +33,15 @@ $text = [
     'logout' => 'Log out',
     'language' => 'Language',
     'register_image' => 'Image profile',
-    'welcome' => 'Hello '
+    'welcome' => 'Hello ',
+    'profile' => 'Profile',
+    'product_list' => 'Product list',
+    'product_name' => 'Product name',
+    'category' => 'Category',
+    'all_categories' => 'All categories',
+    'maxium_price' => 'Maximum price',
+    'price' => 'Price',
+    'filter_button' => 'Filter',
+    'reset_button' => 'Reset filters',
+    'search_product' => 'Search product'
 ];
