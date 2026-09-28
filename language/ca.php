@@ -3,7 +3,11 @@
 $text = [
     'title_index' => 'Exemple de Validació dels usuaris',
     'login' => 'Inicia sessió',
+    'logout' => 'Sortir de la sessió',
+    'username'=>'Usuari',
+    'password' => 'Contrasenya',
     'register' => 'Crea un compte',
+    'hello' => 'Hola',
     'lang_ca'=> 'Català',
     'lang_an'=> 'Anglès',
     'placeholder_userLogin' => 'Només numeros i lletres minúscules',

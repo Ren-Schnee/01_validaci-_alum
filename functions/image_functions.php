@@ -1,30 +1,37 @@
 <?php
-function checkImageProfile($image) {
-    if($image['error']!= UPLOAD_ERR_OK){
-        header('Location: ../view/register.php?error=1');
+
+function checkImageProfile($image)
+{
+    if ($image['error'] != UPLOAD_ERR_OK) {
+        header('Location: ../views/register.php?error=1');
         exit;
     }
 
-    $allowedTypesImage=[
+    //comprovar la mida de la imatge
+
+
+    //Formats d'imatge permessos
+    $alloweTypesImage = [
         'image/jpeg',
         'image/png',
         'image/webp'
     ];
 
-    if (!in_array($image['type'],$allowedTypesImage)){
-        header('Location: ../view/register.php?error=2');
+    
+    if (!in_array($image['type'], $alloweTypesImage)) {
+        header('Location: ../views/register.php?error=2');
         exit;
     }
 
-    //funcio per comprovar extensio del fitxer
-    $extension = match (($allowedTypesImage)) {
-         'image/jpeg' => 'jpg',
-         'image/png' => 'png',
-         'image/webp' => 'webp'
+    //extensio del fitxer, afegim el punt al davant
+    $extension = ".".match ($image['type']) {
+        'image/jpeg' => 'jpg',
+        'image/png' => 'png',
+        'image/webp' => 'webp'
     };
 
-    //funcio per generar el nom
-    $newName = uniqid("profile_", true) . "." . $extension;
+    //generar el nom
+    $newName = uniqid("profile_").$extension;
+
     return $newName;
 }
-?>

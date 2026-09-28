@@ -1,6 +1,7 @@
 <?php
 include('../includes/header.php');
 include('../includes/navbar.php');
+
 ?>
 <div class="container mt-5">
     <div class="row justify-content-center">
@@ -11,8 +12,9 @@ include('../includes/navbar.php');
                 action="../controllers/register_controller.php"
                 method="POST"
                 class="border p-4 bg-light"
+                
                 enctype="multipart/form-data">
-                <!-- basic per enviar fitxers al servidor -->
+                <!-- enctype basic per envair fitxers al servidor -->
 
                 <div class="mb-3">
                     <label for="name" class="form-label">Nom i cognoms</label>
@@ -51,7 +53,7 @@ include('../includes/navbar.php');
 
                 <div class="mb-3">
                     <label for="mail" class="form-label">Correu electrònic</label>
-                    <input type="text" name="mail" class="form-control" required>
+                    <input type="mail" name="mail" class="form-control" required>
                 </div>
 
                 <div class="mb-3">

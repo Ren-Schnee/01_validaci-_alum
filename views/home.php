@@ -1,6 +1,7 @@
 <?php
 include('../includes/header.php');
 include('../includes/navbar.php');
+
 ?>
 
 <div class="container mt-5">
@@ -9,6 +10,6 @@ include('../includes/navbar.php');
     </h1>
 </div>
 
-<?
+<?php
 include('../includes/footer.php');
 ?>

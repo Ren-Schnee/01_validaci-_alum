@@ -1,8 +1,19 @@
 <?php
-  $currentPage = basename($_SERVER['PHP_SELF']);
-  echo $currentPage;
-?>
+//SCript per gestionar el idioma de la pgaina
+//desem el nom de la pagina per passar-lo al servidor
+$currentPAge = basename($_SERVER['PHP_SELF']);
 
+
+$text = [];
+if ($_SESSION['LANG_APP'] == 'ca') {
+  include("../language/ca.php");
+}
+if ($_SESSION['LANG_APP'] == 'an') {
+  include("../language/an.php");
+}
+
+
+?>
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="../views/home.php">
@@ -13,22 +24,48 @@
       Exemple de validacio d'usuaris
     </a>
     <ul class="nav">
+
+      <?php if (isset($_SESSION['user_logged'])) { ?>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../controllers/logout_controller.php"><?= $text['logout'] ?></a>
+        </li>
+
+      <?php } else { ?>
       <li class="nav-item">
-        <a class="nav-link active" href="../views/login.php">Login</a>
+        <a class="nav-link active" href="../views/login.php"><?= $text['login'] ?></a>
       </li>
+      <?php } ?>
+
       <li class="nav-item">
-        <a class="nav-link" href="../views/register.php">Crea un compte</a>
+        <a class="nav-link" href="../views/register.php"><?= $text['register'] ?></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-         Idioma
+          Idioma
         </a>
         <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="../controllers/language_controller.php?lang=ca&redirect=<?=$currentPage?>">Catala</a></li>
-          <li><a class="dropdown-item" href="../controllers/language_controller.php?lang=an&redirect=<?=$currentPage?>">Anglés</a></li>
+          <li><a class="dropdown-item" href="../controllers/language_controller.php?lang=ca&redirect=<?= $currentPAge ?>"><?= $text['lang_ca'] ?></a></li>
+          <li><a class="dropdown-item" href="../controllers/language_controller.php?lang=an&redirect=<?= $currentPAge ?>"><?= $text['lang_an'] ?></a></li>
+
         </ul>
       </li>
 
+      <?php if (isset($_SESSION['user_logged'])) { ?>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../views/products.php"><?= $text['navbar_app_title'] ?></a>
+        </li>
+
+      <?php }?>
+
+      <?php if (isset($_SESSION['user_logged'])) { ?>
+        <li class="nav-item">
+          <span class="nav-link disabled">
+            <?= $text['hello'] ?>, <?= htmlspecialchars($_SESSION['user_logged']['name']) ?>
+          </span>
+         </li>
+      <?php } ?>
 
     </ul>
 

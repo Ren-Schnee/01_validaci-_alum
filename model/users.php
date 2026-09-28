@@ -4,15 +4,16 @@ $users = [
         "id" => 0,
         "name" => "Daniel Espinosa",
         "username" => "admin",
+        //Desem el password encriptat
         "password" => password_hash('123', PASSWORD_DEFAULT),
-        "mail" => "toni.fernandez@cirvianum.cat",
+        "mail" => "daniel.espinosa@cirvianum.cat",
         "rol" => "admin",
         "image" => 'default.png'
     ],
     [
         "id" => 1,
-        "name" => "Ren Schnee",
-        "username" => "ren",
+        "name" => "Raquel Boronat",
+        "username" => "raquel",
         "password" => password_hash('123', PASSWORD_DEFAULT),
         "mail" => "raquel.boronat@cirvianum.cat",
         "rol" => "user",

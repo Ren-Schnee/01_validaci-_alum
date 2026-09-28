@@ -5,8 +5,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET') {
         $_SESSION['LANG_APP']=$_GET['lang'];
         $redirectPage = $_GET['redirect'];
 
-        header('Location: ../views/');
+        header('Location: ../views/'.$redirectPage);
         exit;
     }
 }
-?>
