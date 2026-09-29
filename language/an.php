@@ -43,5 +43,15 @@ $text = [
     'price' => 'Price',
     'filter_button' => 'Filter',
     'reset_button' => 'Reset filters',
-    'search_product' => 'Search product'
+    'search_product' => 'Search product',
+    'add_to_cart' => 'Add to cart',
+    'productInCart' => 'Product added successfully',
+    'cart' => 'My cart',
+    'historicCart' => 'My orders',
+    'shpoingCart' => 'Shopping cart',
+    'product' => 'Product',
+    'quantity' => 'Quantity',
+    'cartSubtotal' => 'Subtotal',
+    'cartTotal' => 'Total',
+    'confirmCart' => 'Confirm purchase'
 ];

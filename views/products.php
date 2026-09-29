@@ -1,5 +1,5 @@
 <?php
-
+include("../functions/user_functions.php");
 $text = [];
 
 include("../includes/header.php");
@@ -82,44 +82,45 @@ $products = $_SESSION['filterProducts'] ?? $_SESSION['products'];
     <!-- Comença la llista de productes -->
     <div class="row g-4 mb-4">
         <!-- card de producte -->
-         <?php foreach ($products as $product):
-            ?>
-        <div class="col-md-3 col-sm-6">
-            <div class="card bg-light w-100">
-                <div class="card-body">
-                    <!-- Nom del producte -->
-                    <h5 class="card-title fw-bold">
-                        <?= $product['name'] ?>
-                    </h5>
-                    <!-- imatge -->
-                    <img
-                        src="../public/images/products/<?= $product['image'] ?>"
-                        class="card-img-top"
-                        style="height: 200px; object-fit: cover;"
-                        alt="<?= $product['name'] ?>">
-                    <!-- Descripcio -->
-                    <p class="card-text overflow-hidden" style="height:5rem;">
-                        <?= $product['description'] ?>
-                    </p>
-                    <!-- preu -->
-                    <p class="fw-bold text-center">
-                        <?= $product['price'] ?>
-                    </p>
-                    <!-- Boto per afegir al carret fent servir POST -->
-                    <div class="d-flex justify-content-center">
-                        <a
-                            href="#"
-                            class="btn btn-primary">
+        <?php foreach ($products as $product):
+        ?>
+            <div class="col-md-3 col-sm-6">
+                <div class="card bg-light w-100">
+                    <div class="card-body">
+                        <!-- Nom del producte -->
+                        <h5 class="card-title fw-bold">
+                            <?= $product['name'] ?>
+                        </h5>
+                        <!-- imatge -->
+                        <img
+                            src="../public/images/products/<?= $product['image'] ?>"
+                            class="card-img-top"
+                            style="height: 200px; object-fit: cover;"
+                            alt="<?= $product['name'] ?>">
+                        <!-- Descripcio -->
+                        <p class="card-text overflow-hidden" style="height:5rem;">
+                            <?= $product['description'] ?>
+                        </p>
+                        <!-- preu -->
+                        <p class="fw-bold text-center">
+                            <?= $product['price'] ?>
+                        </p>
+                        <!-- Boto per afegir amb el mètode GET -->
+                        <div class="d-flex justify-content-center">
+                            <form action="../controllers/add_cart_controller.php" method="POST">
+                                <input type="hidden" name="id" value="<?= $product['id'] ?>">
 
-                            <i class="bi bi-cart-plus"></i>
-                            Aegir al carret
-                        </a>
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="bi bi-cart-plus"></i>
+                                    <?= $text['add_to_cart'] ?>
+                                </button>
+                            </form>
+
+                        </div>>
 
                     </div>
-
                 </div>
             </div>
-        </div>
         <?php endforeach; ?>
 
 

@@ -11,7 +11,7 @@ if ($_SESSION['LANG_APP'] == 'an') {
 }
 
 //nomes per mostrar productes sense passar per autenticació
-/*$_SESSION['user'] = [
+$_SESSION['user'] = [
     "id" => 0,
     "name" => "Daniel Espinosa",
     "username" => "admin",
@@ -19,7 +19,7 @@ if ($_SESSION['LANG_APP'] == 'an') {
     "mail" => "daniel.espinosa@cirvianum.cat",
     "rol" => "admin",
     "image" => 'default.png'
-];*/
+];
 
 
 ?>
@@ -41,7 +41,7 @@ if ($_SESSION['LANG_APP'] == 'an') {
       </li>
 
       <li class="nav-item">
-        <a class="nav-link active" href="#">
+        <a class="nav-link active" href="../views/cart.php">
           Històric de comandes
         </a>
       </li>

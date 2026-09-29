@@ -43,5 +43,15 @@ $text = [
     'price'=> 'Preu',
     'filter_button' => 'Filtrar',
     'reset_button'=> 'Netejar filtres',
-    'search_product' => 'Cerca producte'
+    'search_product' => 'Cerca producte',
+    'add_to_cart' => 'Afegeix al carret',
+    'productInCart' => 'Producte afegit correctament',
+    'cart'=>'La meva compra',
+    'historicCart' => 'Les meves comandes',
+     'shpoingCart' => 'Carret de la compra',
+    'product' => 'Producte',
+    'quantity' => 'Quantitat',
+    'cartSubtotal' => 'Subtotal',
+    'cartTotal' => 'Total',
+    'confirmCart' => 'Confirmar compra'
 ];
