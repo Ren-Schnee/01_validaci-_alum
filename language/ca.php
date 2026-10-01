@@ -48,10 +48,11 @@ $text = [
     'productInCart' => 'Producte afegit correctament',
     'cart'=>'La meva compra',
     'historicCart' => 'Les meves comandes',
-     'shpoingCart' => 'Carret de la compra',
+     'shoppingCart' => 'Carret de la compra',
     'product' => 'Producte',
     'quantity' => 'Quantitat',
     'cartSubtotal' => 'Subtotal',
     'cartTotal' => 'Total',
-    'confirmCart' => 'Confirmar compra'
+    'confirmCart' => 'Confirmar compra',
+    'emptyCart' => 'El carret està buit'
 ];

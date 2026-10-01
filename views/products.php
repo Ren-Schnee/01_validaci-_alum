@@ -12,6 +12,7 @@ include("../includes/navbar_app.php");
 }*/
 
 $products = $_SESSION['filterProducts'] ?? $_SESSION['products'];
+$categories = $_SESSION['categories'] ?? [];
 
 ?>
 
@@ -26,30 +27,27 @@ $products = $_SESSION['filterProducts'] ?? $_SESSION['products'];
         <form action="../controllers/filter_controller.php" method="POST" class="row g-3">
             <div class="col-md-4">
                 <!-- Filtre per nom -->
-                <label class="form-label">Nom del producte </label>
+                <label class="form-label"><?= $text['product_name'] ?></label>
                 <input
                     type="text"
                     name="name"
                     class="form-control"
-                    placeholder="Buscar producte">
+                    placeholder="<?= $text['search_product'] ?>">
             </div>
 
 
             <div class="col-md-4">
                 <!-- Filtre per categoria -->
-                <label class="form-label">Categoria</label>
+                <label class="form-label"><?= $text['category'] ?></label>
 
                 <select name="category" class="form-select">
-                    <option value="">Tores les categories</option>
-                    <option value="categoria1">
-                        categoria1
-                    </option>
-                    <option value="categoria2">
-                        categoria2
-                    </option>
-                    <option value="categoria3">
-                        categoria3
-                    </option>
+                    <option value=""><?= $text['all_categories'] ?></option>
+
+                    <?php foreach ($categories as $category) : ?>
+                        <option value="<?= $category ?>">
+                            <?= $category ?>
+                        </option>
+                    <?php endforeach; ?>
 
                 </select>
 
@@ -57,27 +55,35 @@ $products = $_SESSION['filterProducts'] ?? $_SESSION['products'];
 
             <div class="col-md-4">
                 <!-- Filtre per preu maxim -->
-                <label class="form-label">Preu</label>
+                <label class="form-label"><?= $text['price'] ?></label>
 
                 <input
                     type="number"
                     name="price"
                     class="form-control"
                     step="0.01"
-                    placeholder="Preu maxim">
+                    placeholder="<?= $text['maxium_price'] ?>">
             </div>
 
             <div class="col-12 d-flex justify-content-center gap-2">
                 <button type="submit" class="btn btn-primary">
-                    Filtrar
+                    <?= $text['filter_button'] ?>
                 </button>
                 <a href="../controllers/filter_controller.php?delete=1" class="btn btn-secondary">
-                    Netejar Filtres
+                    <?= $text['reset_button'] ?>
                 </a>
             </div>
 
         </form>
     </div>
+
+    <!-- Missatge de producte afegit al carret -->
+    <?php if (isset($_GET['productInCart']) && $_GET['productInCart'] = true) : ?>
+        <div class="alert alert-success text-center mx-auto w-50" role="alert">
+            <?= $text['productInCart']; ?>
+            <?php unset($_GET['productInCart']); ?>
+        </div>
+    <?php endif; ?>
 
     <!-- Comença la llista de productes -->
     <div class="row g-4 mb-4">
@@ -115,8 +121,7 @@ $products = $_SESSION['filterProducts'] ?? $_SESSION['products'];
                                     <?= $text['add_to_cart'] ?>
                                 </button>
                             </form>
-
-                        </div>>
+                        </div>
 
                     </div>
                 </div>

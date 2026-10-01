@@ -34,15 +34,23 @@ $_SESSION['user'] = [
     </a>
     <ul class="nav align-items-center">
 
-      <li class="nav-item">
-        <a class="nav-link active" href="#">
-          La Meva Compra
-        </a>
-      </li>
+      <?php if ($currentPage === 'cart.php'): ?>
+        <li class="nav-item">
+          <a class="nav-link active" href="../views/products.php">
+            <?= $text['navbar_app_title'] ?>
+          </a>
+        </li>
+      <?php else: ?>
+        <li class="nav-item">
+          <a class="nav-link active" href="../views/cart.php">
+            <?= $text['shoppingCart'] ?>
+          </a>
+        </li>
+      <?php endif; ?>
 
       <li class="nav-item">
-        <a class="nav-link active" href="../views/cart.php">
-          Històric de comandes
+        <a class="nav-link active" href="#">
+          <?= $text['historicCart'] ?>
         </a>
       </li>
 
