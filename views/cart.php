@@ -118,13 +118,11 @@ $total = 0;
 
         <div class="d-flex justify-content-end mt-4">
 
-            <a
-                href="#"
-                class="btn btn-success btn-lg">
-
-                <?= $text['confirmCart'] ?>
-
-            </a>
+            <form action="../controllers/checkout_controller.php" method="post">
+                <button type="submit" name="confirm_purchase" value="1" class="btn btn-success btn-lg">
+                    <?= $text['confirmCart'] ?>
+                </button>
+            </form>
 
         </div>
     <?php endif; ?>

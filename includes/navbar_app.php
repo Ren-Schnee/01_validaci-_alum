@@ -47,13 +47,20 @@ $_SESSION['user'] = [
           </a>
         </li>
       <?php endif; ?>
-
-      <li class="nav-item">
-        <a class="nav-link active" href="#">
-          <?= $text['historicCart'] ?>
-        </a>
-      </li>
-
+      
+      <?php if ($currentPage === 'history.php'): ?>
+        <li class="nav-item">
+          <a class="nav-link active" href="../views/products.php">
+            <?= $text['navbar_app_title'] ?>
+          </a>
+        </li>
+      <?php else: ?>
+        <li class="nav-item">
+          <a class="nav-link active" href="../views/history.php">
+            <?= $text['historicCart'] ?>
+          </a>
+        </li>
+      <?php endif; ?>
       <li class="nav-item">
         <a class="nav-link" href="#">
 
