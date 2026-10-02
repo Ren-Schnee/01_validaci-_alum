@@ -22,7 +22,7 @@ $categories = $_SESSION['categories'] ?? [];
 
 
 <div class="container mx-auto mt-3 my-6">
-    <div class="bg-light p-4 rounded mb-4 border">
+    <div class="bg-dark p-4 rounded mb-4 border">
         <!-- Comença el form del filtre de productes -->
         <form action="../controllers/filter_controller.php" method="POST" class="row g-3">
             <div class="col-md-4">
@@ -91,7 +91,7 @@ $categories = $_SESSION['categories'] ?? [];
         <?php foreach ($products as $product):
         ?>
             <div class="col-md-3 col-sm-6">
-                <div class="card bg-light w-100">
+                <div class="card bg-dark w-100">
                     <div class="card-body">
                         <!-- Nom del producte -->
                         <h5 class="card-title fw-bold">

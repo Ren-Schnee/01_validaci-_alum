@@ -1,0 +1,86 @@
+/* Bootstrap blue override */
+
+:root {
+    --bs-primary: #20b2aa;
+    --bs-primary-rgb: 32, 178, 170;
+
+    --bs-link-color: #168c86;
+    --bs-link-hover-color: #106b67;
+}
+
+/* Primary buttons */
+.btn-primary {
+    --bs-btn-bg: #20b2aa;
+    --bs-btn-border-color: #20b2aa;
+
+    --bs-btn-hover-bg: #168c86;
+    --bs-btn-hover-border-color: #168c86;
+
+    --bs-btn-active-bg: #106b67;
+    --bs-btn-active-border-color: #106b67;
+
+    --bs-btn-disabled-bg: #20b2aa;
+    --bs-btn-disabled-border-color: #20b2aa;
+}
+
+/* Outline primary buttons */
+.btn-outline-primary {
+    --bs-btn-color: #20b2aa;
+    --bs-btn-border-color: #20b2aa;
+
+    --bs-btn-hover-bg: #20b2aa;
+    --bs-btn-hover-border-color: #20b2aa;
+
+    --bs-btn-active-bg: #168c86;
+    --bs-btn-active-border-color: #168c86;
+}
+
+/* Background utility */
+.bg-primary {
+    background-color: #20b2aa !important;
+}
+
+/* Text utility */
+.text-primary {
+    color: #20b2aa !important;
+}
+
+/* Border utility */
+.border-primary {
+    border-color: #20b2aa !important;
+}
+
+/* Links */
+a {
+    color: #168c86;
+}
+
+a:hover {
+    color: #106b67;
+}
+
+/* Form focus */
+.form-control:focus,
+.form-select:focus {
+    border-color: #20b2aa;
+    box-shadow: 0 0 0 0.25rem rgba(32, 178, 170, 0.25);
+}
+
+/* Checkboxes / radio buttons */
+.form-check-input:checked {
+    background-color: #20b2aa;
+    border-color: #20b2aa;
+}
+
+/* Pagination */
+.pagination {
+    --bs-pagination-color: #168c86;
+    --bs-pagination-hover-color: #106b67;
+    --bs-pagination-active-bg: #20b2aa;
+    --bs-pagination-active-border-color: #20b2aa;
+}
+
+/* Progress bars */
+.progress-bar {
+    background-color: #20b2aa;
+}

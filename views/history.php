@@ -25,7 +25,7 @@ $userHistory = $_SESSION['user_history'] ?? [];
 
     <?php else : ?>
 
-        <?php foreach ($userHistory as $order) : ?>
+        <?php foreach ($userHistory as $orderId => $order) : ?>
 
             <?php $orderTotal=0; ?>
 
@@ -96,9 +96,22 @@ $userHistory = $_SESSION['user_history'] ?? [];
 
                 </table>
 
+                <div class="col-12 d-flex justify-content-center">
+                        <form action="../controllers/PDF_controller.php" method="POST">
+                            <input type="hidden" name="order" value="<?= $orderId ?>">
+                            <input class="btn btn-success" type="submit" value="Generar Factura PDF">
+                        </form>
+                </div>
+
             </div>
 
-        <?php endforeach; ?>
+        <?php
+
+        echo "<pre>";
+        print_r($userHistory);
+        echo "</pre>";
+
+    endforeach; ?>
 
     <?php endif; ?>
 

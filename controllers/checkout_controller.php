@@ -20,7 +20,7 @@ if (isset($_POST['confirm_purchase']) && !empty($_SESSION['cart'])) {
 		$_SESSION['history'] = [];
 	}
 
-	array_push($_SESSION['history'], $order);
+	array_unshift($_SESSION['history'], $order);
 
     unset($_SESSION['cart']);
 
